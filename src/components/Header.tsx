@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ShoppingCart } from "lucide-react";
 import { brand } from "../data/content";
 
 const links = [
@@ -49,6 +49,7 @@ export default function Header() {
           scrolled ? "bg-honey-50/95 backdrop-blur shadow-sm border-b border-honey-200" : "bg-honey-50"
         }`}
       >
+        {/* Fila 1: logo + hamburguesa */}
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
           <span className="flex items-center gap-2.5">
             <svg viewBox="0 0 24 24" className="w-6 h-6 text-honey-600" fill="none" stroke="currentColor" strokeWidth="1.4">
@@ -67,12 +68,6 @@ export default function Header() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#contacto"
-              className="inline-flex items-center gap-2 bg-honey-500 hover:bg-honey-600 text-forest-900 font-semibold text-sm px-5 py-2.5 rounded-full transition"
-            >
-              <MessageCircle size={16} /> Contacto
-            </a>
           </nav>
 
           <button
@@ -82,6 +77,44 @@ export default function Header() {
           >
             <Menu />
           </button>
+        </div>
+
+        {/* Fila 2: Contacto + carrito (solo mobile) */}
+        <div className="md:hidden flex items-center justify-between px-6 pb-4 gap-3">
+          <a
+            href={`https://wa.me/${brand.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-honey-500 hover:bg-honey-600 text-forest-900 font-semibold text-sm px-5 py-2.5 rounded-full transition"
+          >
+            <MessageCircle size={16} /> Contacto
+          </a>
+          <a
+            href="#productos"
+            aria-label="Ver productos"
+            className="text-forest-700 border border-forest-700 rounded-full p-2.5"
+          >
+            <ShoppingCart size={18} />
+          </a>
+        </div>
+
+        {/* Contacto + carrito en desktop, inline en la nav */}
+        <div className="hidden md:flex items-center gap-3 absolute top-4 right-6">
+          <a
+            href={`https://wa.me/${brand.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-honey-500 hover:bg-honey-600 text-forest-900 font-semibold text-sm px-5 py-2.5 rounded-full transition"
+          >
+            <MessageCircle size={16} /> Contacto
+          </a>
+          <a
+            href="#productos"
+            aria-label="Ver productos"
+            className="text-forest-700 border border-forest-700 rounded-full p-2.5"
+          >
+            <ShoppingCart size={18} />
+          </a>
         </div>
       </div>
 
