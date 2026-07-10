@@ -36,3 +36,4 @@ Las imágenes de productos van en `public/images/` con los nombres referenciados
 
 ---
 Desarrollado por KCN Studio
+
