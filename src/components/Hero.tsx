@@ -4,7 +4,7 @@ import ExportSeal from "./ExportSeal";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+  <section className="relative min-h-screen flex items-center overflow-hidden pt-28">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/hero-bees-jar.jpg')" }}
