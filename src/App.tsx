@@ -17,7 +17,7 @@ export default function App() {
         className="fixed inset-0 -z-10 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('/images/honeycomb-bg.jpg')" }}
       />
-      <div className="fixed inset-0 -z-10 bg-honey-50/92" />
+    <div className="fixed inset-0 -z-10 bg-honey-50/70" />
 
       <Header />
       <Hero />
